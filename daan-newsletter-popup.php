@@ -1,8 +1,8 @@
 <?php
 /**
  * @formatter:off
- * Plugin Name: Daan's Newsletter Popup
- * Plugin URI: https://github.com/Dan0sz/newsletter-popup
+ * Plugin Name: Newsletter Popup Lite
+ * Plugin URI: https://github.com/Dan0sz/newsletter-popup-lite
  * Description: Show a newsletter subscription box when a visitor reaches halfway the content. Simple, but effective.
  * Version: 1.0.1
  * Author: Daan van den Bergh
