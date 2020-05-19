@@ -4,7 +4,7 @@
  * Plugin Name: Daan's Newsletter Popup
  * Plugin URI: https://github.com/Dan0sz/newsletter-popup
  * Description: Show a newsletter subscription box when a visitor reaches halfway the content. Simple, but effective.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Daan van den Bergh
  * Author URI: https://daan.dev
  * Text Domain: daan-newsletter-popup
@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 define('DAAN_NEWSLETTER_POPUP_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('DAAN_NEWSLETTER_POPUP_PLUGIN_FILE', __FILE__);
 define('DAAN_NEWSLETTER_POPUP_PLUGIN_BASENAME', plugin_basename(__FILE__));
-define('DAAN_NEWSLETTER_POPUP_STATIC_VERSION', '1.0.0');
+define('DAAN_NEWSLETTER_POPUP_STATIC_VERSION', '1.0.1');
 
 /**
  * Takes care of loading classes on demand.
