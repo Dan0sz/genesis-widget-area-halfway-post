@@ -8,6 +8,7 @@
  * Author: Daan van den Bergh
  * Author URI: https://daan.dev
  * Text Domain: daan-newsletter-popup
+ * Github Plugin URI: Dan0sz/newsletter-popup
  * @formatter:on
  */
 
