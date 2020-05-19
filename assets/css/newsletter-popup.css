@@ -1,0 +1,37 @@
+/* * * * * * * * * * * * * * * * * * * * *
+ * @package  : newsletter-popup
+ * @author   : Daan van den Bergh
+ * @copyright: (c) 2020 Daan van den Bergh
+ * @url      : https://daan.dev
+ * * * * * * * * * * * * * * * * * * * * */
+
+.newsletter-popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 3px 5px 15px;
+}
+
+.newsletter-popup .widget-wrap {
+    position: relative;
+}
+
+.newsletter-popup .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+.newsletter-popup .close:before {
+    content: 'x';
+}
+
+.newsletter-popup .close {
+    padding: 3px 12px 6px;
+}
