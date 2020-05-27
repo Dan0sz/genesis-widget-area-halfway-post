@@ -11,6 +11,7 @@ jQuery(document).ready(function ($) {
         close_button: 'close',
         cookies: Cookies.noConflict(),
         cookie_name: 'newsletter_popup_closed',
+        closed: false,
 
         // Selectors
         $document_height: $(document).height(),
@@ -59,7 +60,7 @@ jQuery(document).ready(function ($) {
             scroll_top = $(window).scrollTop();
 
             // Show pop-up around the middle of the document, not after the middle.
-            if (scroll_top > newsletter_popup.$document_height / 2.5 && scroll_top < newsletter_popup.$document_height / 2) {
+            if (scroll_top > newsletter_popup.$document_height / 2.5 && scroll_top < newsletter_popup.$document_height / 2 && newsletter_popup.closed === false) {
                 newsletter_popup.show_popup();
             }
         },
@@ -75,6 +76,7 @@ jQuery(document).ready(function ($) {
          *
          */
         close_popup: function() {
+            newsletter_popup.closed = true;
             newsletter_popup.cookies.set(newsletter_popup.cookie_name, 'true', { 'expires': 30, 'sameSite': 'strict' });
             $('.' + newsletter_popup.class_name).fadeOut();
         }
