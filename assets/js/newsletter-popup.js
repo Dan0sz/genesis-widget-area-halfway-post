@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
         init: function () {
             this.create_popup();
 
-            $(window).on('scroll', this.detect_position);
+            setTimeout(this.show_popup, 30000);
             $('.' + this.class_name).on('click', '.' + this.close_button, this.close_popup);
         },
 
@@ -36,33 +36,12 @@ jQuery(document).ready(function ($) {
                 return;
             }
 
-            $clone = newsletter_popup.$widget.clone();
+            $clone = newsletter_popup.$widget.parent().clone();
             $clone.addClass(newsletter_popup.class_name);
-            $clone.css('width', newsletter_popup.$widget.width());
+            $clone.css('width', newsletter_popup.$widget.parent().outerWidth());
             $clone.appendTo('body');
 
             $clone.append('<span class="' + newsletter_popup.close_button + '"></span>');
-        },
-
-        /**
-         *
-         */
-        detect_position: function () {
-            if ($('.' + newsletter_popup.class_name).is(':visible')) {
-                return;
-            }
-
-            // If cookie is set, return.
-            if (newsletter_popup.cookies.get(newsletter_popup.cookie_name)) {
-                return;
-            }
-
-            scroll_top = $(window).scrollTop();
-
-            // Show pop-up around the middle of the document, not after the middle.
-            if (scroll_top > newsletter_popup.$document_height / 2.5 && scroll_top < newsletter_popup.$document_height / 2 && newsletter_popup.closed === false) {
-                newsletter_popup.show_popup();
-            }
         },
 
         /**
