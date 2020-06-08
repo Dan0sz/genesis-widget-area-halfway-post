@@ -4,7 +4,7 @@
  * Plugin Name: Newsletter Popup Lite
  * Plugin URI: https://github.com/Dan0sz/newsletter-popup-lite
  * Description: Show a newsletter subscription box when a visitor reaches halfway the content. Simple, but effective.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Daan van den Bergh
  * Author URI: https://daan.dev
  * Text Domain: daan-newsletter-popup
