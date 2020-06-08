@@ -11,7 +11,6 @@ jQuery(document).ready(function ($) {
         close_button: 'close',
         cookies: Cookies.noConflict(),
         cookie_name: 'newsletter_popup_closed',
-        closed: false,
 
         // Selectors
         $document_height: $(document).height(),
@@ -55,7 +54,6 @@ jQuery(document).ready(function ($) {
          *
          */
         close_popup: function() {
-            newsletter_popup.closed = true;
             newsletter_popup.cookies.set(newsletter_popup.cookie_name, 'true', { 'expires': 30, 'sameSite': 'strict' });
             $('.' + newsletter_popup.class_name).fadeOut();
         }
