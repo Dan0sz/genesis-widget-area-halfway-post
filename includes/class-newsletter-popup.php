@@ -17,7 +17,7 @@ class NewsletterPopup
 
     private function init()
     {
-        if (!is_admin()) {
+        if (!is_admin() && is_single() && 'post' == get_post_type()) {
             add_action('wp_enqueue_scripts', [$this, 'enqueue_admin_scripts']);
         }
     }
