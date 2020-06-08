@@ -17,7 +17,7 @@ class NewsletterPopup
 
     private function init()
     {
-        if (!is_admin() && is_single()) {
+        if (!is_admin() && is_single() && get_post_type() == 'post') {
             $this->enqueue_admin_scripts();
         }
     }
