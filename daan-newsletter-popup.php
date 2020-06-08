@@ -77,4 +77,4 @@ function daan_newsletter_popup_init()
     return $newsletter_popup;
 }
 
-daan_newsletter_popup_init();
+add_action('wp_enqueue_scripts', 'daan_newsletter_popup_init');
