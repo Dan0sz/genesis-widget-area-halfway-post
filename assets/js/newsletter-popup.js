@@ -21,6 +21,10 @@ jQuery(document).ready(function ($) {
          *
          */
         init: function () {
+            if (this.cookies.get(this.cookie_name) === 'true') {
+                return;
+            }
+
             this.create_popup();
 
             setTimeout(this.show_popup, 30000);
