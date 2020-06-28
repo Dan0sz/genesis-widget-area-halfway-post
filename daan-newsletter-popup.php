@@ -37,28 +37,13 @@ function daan_newsletter_popup_autoload($class)
         return;
     }
 
-    $filename = '';
-
-    if (count($path) == 1) {
-        $parts = preg_split('/(?=[A-Z])/', lcfirst($path[0]));
-
-        $filename = 'class-' . strtolower(implode('-', $parts)) . '.php';
-    } else {
-        array_shift($path);
-        end($path);
-        $i = 0;
-
-        while ($i < key($path)) {
-            $filename .= strtolower($path[$i]) . '/';
-            $i++;
-        }
-
-        $pieces = preg_split('/(?=[A-Z])/', lcfirst($path[$i]));
-
-        $filename .= 'class-' . strtolower(implode('-', $pieces)) . '.php';
+    if (!class_exists('Woosh_Autoloader')) {
+        require_once(DAAN_NEWSLETTER_POPUP_PLUGIN_DIR . 'woosh-autoload.php');
     }
 
-    return include DAAN_NEWSLETTER_POPUP_PLUGIN_DIR . 'includes/' . $filename;
+    $autoload = new Woosh_Autoloader($class);
+
+    return include DAAN_NEWSLETTER_POPUP_PLUGIN_DIR . 'includes/' . $autoload->load();
 }
 
 spl_autoload_register('daan_newsletter_popup_autoload');
