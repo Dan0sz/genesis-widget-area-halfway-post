@@ -3,7 +3,7 @@
  * @formatter:off
  * Plugin Name: Widget Area Halfway Post for Genesis
  * Plugin URI: https://github.com/Dan0sz/genesis-widget-area-halfway-post
- * Description: Add a widget area before the middle chapter  of your post's content.
+ * Description: Add a widget area before the middle chapter of your post's content.
  * Version: 1.2.1
  * Author: Daan van den Bergh
  * Author URI: https://daan.dev
