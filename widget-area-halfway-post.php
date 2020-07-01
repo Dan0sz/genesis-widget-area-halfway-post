@@ -20,7 +20,7 @@ defined('ABSPATH') || exit;
 define('WOOSH_WIDGET_AREA_HALFWAY_POST_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WOOSH_WIDGET_AREA_HALFWAY_POST_PLUGIN_FILE', __FILE__);
 define('WOOSH_WIDGET_AREA_HALFWAY_POST_PLUGIN_BASENAME', plugin_basename(__FILE__));
-define('WOOSH_WIDGET_AREA_HALFWAY_POST_STATIC_VERSION', '1.1.3');
+define('WOOSH_WIDGET_AREA_HALFWAY_POST_STATIC_VERSION', '1.2.1');
 
 /**
  * Takes care of loading classes on demand.
