@@ -1,1 +1,1 @@
-.newsletter-popup{display:none;position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);background-color:rgba(255,255,255,0.9);box-shadow:3px 5px 15px;z-index:10000}.newsletter-popup .widget-wrap{position:relative}.newsletter-popup .close{position:absolute;top:0;right:0;cursor:pointer}.newsletter-popup .close:before{content:'×';font-size:1.2em}.newsletter-popup .close{padding:3px 12px 6px}
+.halfway-post{box-shadow:0 10px 80px rgba(0,0,0,.1);padding:60px 80px}.halfway-post h3{margin-top:0}

@@ -1,9 +1,7 @@
-# Newsletter Popup Lite for WordPress
+# Add Widget Area (Sidebar) halfway Post Content for Genesis Themes
 
-Show a newsletter subscription popup to your visitors when they're halfway down your content. Extremely lightweight, because it copies the properties of your existing subscription form and presents it as a popup.
+This plugin widgetizes the center of your posts to insert e.g. a newsletter subscription box or ads. It's designed specifically for Genesis Themes.
 
-*Currently only works with eNews Genesis Extended widget. Will soon be made dynamic.*
+## How does it work?
 
-## Description
-
-## Features
+The plugin hooks into the content (`the_content()`) and 
