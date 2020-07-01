@@ -37,7 +37,7 @@ class WidgetAreaHalfwayPost
     public function maybe_insert_sidebar()
     {
         if (!is_admin() && is_single() && get_post_type() == 'post') {
-            wp_enqueue_style($this->handle, plugin_dir_url(WOOSH_WIDGET_AREA_HALFWAY_POST_PLUGIN_FILE) . 'assets/css/newsletter-popup.min.css', [ genesis_get_theme_handle() ], WOOSH_WIDGET_AREA_HALFWAY_POST_STATIC_VERSION);
+            wp_enqueue_style($this->handle, plugin_dir_url(WOOSH_WIDGET_AREA_HALFWAY_POST_PLUGIN_FILE) . 'assets/css/widget-area-halfway-post.min.css', [ genesis_get_theme_handle() ], WOOSH_WIDGET_AREA_HALFWAY_POST_STATIC_VERSION);
             add_filter('the_content', [$this, 'insert_sidebar']);
         }
     }
