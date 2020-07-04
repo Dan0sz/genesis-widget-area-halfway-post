@@ -36,7 +36,10 @@ class WidgetAreaHalfwayPost
      */
     public function maybe_insert_sidebar()
     {
-        if (!is_admin() && is_single() && get_post_type() == 'post') {
+        if (!is_admin()
+            && is_single()
+            && get_post_type() == 'post'
+            && function_exists('genesis_get_theme_handle')) {
             wp_enqueue_style($this->handle, plugin_dir_url(WOOSH_WIDGET_AREA_HALFWAY_POST_PLUGIN_FILE) . 'assets/css/widget-area-halfway-post.min.css', [ genesis_get_theme_handle() ], WOOSH_WIDGET_AREA_HALFWAY_POST_STATIC_VERSION);
             add_filter('the_content', [$this, 'insert_sidebar']);
         }
@@ -47,20 +50,28 @@ class WidgetAreaHalfwayPost
      */
     public function register_sidebar()
     {
-        genesis_register_widget_area(
-            [
-                'id'          => 'halfway-post',
-                'name'        => __('Halfway Post Content', $this->plugin_text_domain),
-                'description' => __('Insert widgets halfway the post\'s content.', $this->plugin_text_domain)
-            ]
-        );
+        if (function_exists('genesis_register_widget_area')) {
+            genesis_register_widget_area(
+                [
+                    'id'          => 'halfway-post',
+                    'name'        => __('Halfway Post Content', $this->plugin_text_domain),
+                    'description' => __('Insert widgets halfway the post\'s content.', $this->plugin_text_domain)
+                ]
+            );
+        }
     }
 
     /**
-     * Inserts the HTML of the sidebar.
+     * @param $html
+     *
+     * @return string
      */
     public function insert_sidebar($html)
     {
+        if (!function_exists('genesis_widget_area')) {
+            return '';
+        }
+
         $headers = preg_split('@(?=\<h2\>)@', $html);
         $middle  = (int) ceil(count($headers) / 2);
 
